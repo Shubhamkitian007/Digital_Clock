@@ -28,15 +28,14 @@ body{
     width: 45%;
     height: 15%;
     border-radius: 5px;
-    margin: 20px;
     background-size: 100% 100%;
     box-shadow: 1px 0px 10px black;
 }
 
 .box-inside{
-    width: 90%;
+    width: 95%;
     height: 50%;
-    margin: 20px;
+    margin-top: 15px;
     border-radius: 5px;
 }
 
@@ -173,6 +172,24 @@ body{
     border-radius: 5px;
     border: 2px rgba(0, 0, 255, 0.658) solid;
 }
+
+.lower-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -30px;
+    width: 90%;
+    height: 15vh;
+    background-color: #9140B5;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
 option{
     font-size: 15px;
 }

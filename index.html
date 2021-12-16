@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="./firstsectionclock.css">
     <link rel="stylesheet" href="./secondsectionclock.css">
     <link rel="stylesheet" href="./design.css">
+    <link rel="stylesheet" href="./design.css">
 </head>
 <body>
     <div class="big-container">
-        <div class="first-box">
+        <div class="first-box" id="f-box">
             <div class="first-clock"></div>
             <div class="box-inside">
                 <div class="first-wakeup">
@@ -120,7 +121,6 @@
             <div class="first-set-time" id="SetOnClick" onclick="actiontime()">
                 <h3 id="set">SET TIME !!</h3>
             </div>
-
         </div>
         <div class="second-box">
             <div class="second-timer" id="timer">
@@ -130,14 +130,14 @@
                     <p>Hours</p>
                 </div>
                 <div class="dot">
-                    <span>:</span>
+                    <span id="blink1">:</span>
                 </div>
                 <div class="time2">
                     <span id="mins">00</span>
                     <p>Minutes</p>
                 </div>
                 <div class="dot">
-                    <span>:</span>
+                    <span id="blink2">:</span>
                 </div>
                 <div class="time3">
                     <span id="secs">00</span>

@@ -42,33 +42,44 @@ function showtime(){
     if(hrs>=16 && hrs<=20){
         upper.innerHTML = "Good Evening Buddy!!";
     }
-    else if(hrs>20 && hrs<5){
+    if(hrs>20 && hrs<=5){
         upper.innerHTML = "Good Night !!";
     }
 }
 setInterval(showtime, 1000);
 
 
+function makediv(){
+    var container = document.createElement('div');
+    container.className="lower-box";
+    container.id="l-box";
+    document.getElementById("f-box").appendChild(container);
+
+    var invalue = document.getElementById("SetTimerWakeUp");
+    var invalue1 = document.getElementById("SetTimerLunch");
+    var invalue2 = document.getElementById("SetTimerNap");
+    var value = invalue.options[invalue.selectedIndex].text;
+    document.getElementById("l-box").innerHTML="Breakfast Time is set to "+ value+"<br/> Lunch Time is set to "+ invalue1.options[invalue1.selectedIndex].text+" <br/>Nap Time is set to "+ invalue2.options[invalue2.selectedIndex].text;
+}
+
 function actiontime(){
 
     var i = document.getElementById('SetTimerWakeUp').value;
-    var hr = new Date().getHours();
+    var j = document.getElementById('SetTimerLunch').value;
+    var k = document.getElementById('SetTimerNap').value;
+    var hrrs = new Date().getHours();
 
-    if(i == hr){
+    if(i == hrrs){
         document.getElementById('lower').style.backgroundImage="url(./Morning.jpeg)";
+        
     }
 
-    var j = document.getElementById('SetTimerLunch').value;
-    var hr = new Date().getHours();
-
-    if(j == hr){
+    else if(j == hrrs){
         document.getElementById('lower').style.backgroundImage="url(./Lunch-Time.jpeg)";
     }
 
-    var k = document.getElementById('SetTimerNap').value;
-    var hr = new Date().getHours();
-
-    if(k == hr){
+    else if(k == hrrs){
         document.getElementById('lower').style.backgroundImage="url(./Night.jpeg)";
     }
+    makediv();
 }
